@@ -1,7 +1,7 @@
 // Seed script - uses dynamic import to load the generated Prisma client
 async function main() {
   // Dynamically import the generated client
-  const { PrismaClient } = await import('../src/generated/prisma/client.js');
+  const { PrismaClient } = await import('@prisma/client');
   const prisma = new PrismaClient();
 
   console.log('🌱 Seeding database...');
