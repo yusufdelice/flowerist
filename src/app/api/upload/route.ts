@@ -1,7 +1,6 @@
 import { type NextRequest } from 'next/server';
 import { isAuthenticated } from '@/lib/auth';
-import { writeFile, mkdir } from 'fs/promises';
-import path from 'path';
+import { put } from '@vercel/blob';
 
 export async function POST(request: NextRequest) {
   const authenticated = await isAuthenticated();
@@ -28,21 +27,19 @@ export async function POST(request: NextRequest) {
       return Response.json({ error: 'File too large (max 5MB)' }, { status: 400 });
     }
 
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
-
-    // Generate unique filename
+    // Generate unique filename to avoid overwrites
     const ext = file.name.split('.').pop() || 'jpg';
-    const filename = `${Date.now()}-${Math.random().toString(36).substring(2, 8)}.${ext}`;
+    const filename = `flowerist-${Date.now()}-${Math.random().toString(36).substring(2, 8)}.${ext}`;
 
-    const uploadDir = path.join(process.cwd(), 'public', 'uploads');
-    await mkdir(uploadDir, { recursive: true });
+    // Upload to Vercel Blob with public access
+    const blob = await put(filename, file, {
+      access: 'public',
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+    });
 
-    const filepath = path.join(uploadDir, filename);
-    await writeFile(filepath, buffer);
-
-    return Response.json({ url: `/uploads/${filename}` }, { status: 201 });
+    return Response.json({ url: blob.url }, { status: 201 });
   } catch (error: unknown) {
+    console.error('Upload error:', error);
     const message = error instanceof Error ? error.message : 'Upload failed';
     return Response.json({ error: message }, { status: 500 });
   }
