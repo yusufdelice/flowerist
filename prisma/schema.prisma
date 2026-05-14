@@ -1,7 +1,7 @@
 // Lotus Çiçekçilik — Database Schema
 
 generator client {
-  provider = "prisma-client"
+  provider = "prisma-client-js"
 }
 
 datasource db {
