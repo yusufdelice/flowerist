@@ -4,7 +4,7 @@ import styles from './hakkimizda.module.css';
 
 export const metadata = {
   title: 'Hakkımızda — Lotus Çiçekçilik',
-  description: 'Lotus Çiçekçilik hakkında bilgi alın. Hikayemiz, değerlerimiz ve iletişim bilgilerimiz.',
+  description: 'Lotus Çiçekçilik hakkında bilgi alın. 2015’ten bu yana Kadıköy’deki atölyemiz, hikayemiz, değerlerimiz ve iletişim bilgilerimiz.',
 };
 
 export default function HakkimizdaPage() {
@@ -13,63 +13,89 @@ export default function HakkimizdaPage() {
       <Header />
       <main className={styles.about}>
         <div className={styles.about__hero}>
-          <h1>Hakkımızda</h1>
+          <span className={styles.about__eyebrow}>Kadıköy, İstanbul</span>
+          <h1>Doğanın Zarafeti, Çiçeğin Sanatı</h1>
           <div className="section-divider"></div>
           <p>
-            Çiçeklerin dilinden anlayan, doğanın güzelliğini sanat eserine dönüştüren bir atölye.
+            2015 yılından bu yana çiçeklerin büyüleyici dilini en özel anlarınıza taşıyan butik çiçek atölyesi.
           </p>
         </div>
 
         <div className={styles.about__content}>
-          {/* Story */}
+          {/* Story with real photo */}
           <div className={styles.about__story}>
-            <div className={styles.about__storyImage}>🌿</div>
+            <div className={styles.about__storyImageWrap}>
+              <img
+                src="/uploads/story-florist.jpg"
+                alt="Lotus Çiçekçilik Atölye ve Florist"
+                className={styles.about__storyImg}
+              />
+            </div>
             <div className={styles.about__storyContent}>
-              <h2>Hikayemiz</h2>
+              <span className={styles.about__subhead}>Biz Kimiz?</span>
+              <h2>Çiçeklere Aşık Bir Ekip</h2>
               <p>
-                Lotus Çiçekçilik, çiçeklere olan tutkuyla 2015 yılında İstanbul&apos;da kuruldu.
-                Amacımız, her bir aranjmanda doğanın eşsiz güzelliğini yansıtmak ve
-                müşterilerimize unutulmaz anlar yaşatmak.
+                Lotus Çiçekçilik, doğanın en saf renklerini insan ruhuna dokunan tasarımlara
+                dönüştürme tutkusuyla kuruldu. Bağdat Caddesi’ndeki sıcak atölyemizde her sabah,
+                çiçek mezatından taze gelen tomurcukları tek tek seçerek güne başlıyoruz.
               </p>
               <p>
-                Uzman floristlerimiz, en taze çiçekleri özenle seçerek sizin için benzersiz
-                tasarımlar oluşturuyor. Her buketimiz, bir hikaye anlatır; her aranjmanımız,
-                bir duyguyu ifade eder.
+                Bizim için hiçbir sipariş sıradan bir kutu veya paket değildir. Bir annenin
+                gülümsemesi, sevdiğine kavuşan bir kalbin heyecanı ya da dostluğun en samimi
+                ifadesidir.
               </p>
               <p>
-                Yıllar içinde binlerce mutlu müşteriye hizmet verdik ve her geçen gün
-                kendimizi geliştirmeye devam ediyoruz.
+                Uluslararası floristik trendleri yerel el işçiliğiyle harmanlıyor; her mevsime
+                özgü en taze dokuları sanat eseri titizliğiyle bir araya getiriyoruz.
               </p>
+
+              <div className={styles.about__stats}>
+                <div>
+                  <strong>10+</strong>
+                  <span>Yıllık Deneyim</span>
+                </div>
+                <div>
+                  <strong>15.000+</strong>
+                  <span>Teslim Edilen Çiçek</span>
+                </div>
+                <div>
+                  <strong>%100</strong>
+                  <span>Tazelik Garantisi</span>
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Values */}
           <div className={styles.about__values}>
-            <h2>Değerlerimiz</h2>
-            <div className="section-divider"></div>
+            <div className="section-title">
+              <h2>İlkelerimiz ve Değerlerimiz</h2>
+              <div className="section-divider"></div>
+              <p>Neden binlerce kişi sevdiklerini sevindirirken bize güveniyor?</p>
+            </div>
             <div className={styles.about__valuesGrid}>
               <div className={styles.about__value}>
-                <div className={styles.about__valueIcon}>🌱</div>
-                <h3>Tazelik</h3>
+                <div className={styles.about__valueIcon}>🌸</div>
+                <h3>Kusursuz Tazelik</h3>
                 <p>
-                  Çiçeklerimiz her gün taze olarak temin edilir.
-                  En kaliteli ürünleri sizlere sunmak önceliğimizdir.
+                  Asla bekletilmiş çiçek kullanmıyoruz. Sabah mezatından gelen çiçekleri
+                  aynı gün kuryemizle sıcağı sıcağına teslim ediyoruz.
                 </p>
               </div>
               <div className={styles.about__value}>
                 <div className={styles.about__valueIcon}>🎨</div>
-                <h3>Tasarım</h3>
+                <h3>Özgün & Butik Tasarım</h3>
                 <p>
-                  Her aranjman, uzman floristlerimiz tarafından
-                  özenle ve yaratıcılıkla tasarlanır.
+                  Kalıplaşmış buketler yerine, renk teorisi ve doku uyumuyla floristlerimiz
+                  tarafından hazırlanan benzersiz aranjmanlar sunuyoruz.
                 </p>
               </div>
               <div className={styles.about__value}>
-                <div className={styles.about__valueIcon}>💚</div>
-                <h3>Güven</h3>
+                <div className={styles.about__valueIcon}>🚀</div>
+                <h3>Özel Araçlı Teslimat</h3>
                 <p>
-                  Zamanında teslimat ve müşteri memnuniyeti
-                  bizim için en önemli değerdir.
+                  Çiçekleriniz toplu kargolarla ezilmez; kendi özel araçlı kuryelerimizle
+                  tam saatinde ve kusursuz formda alıcısına ulaştırılır.
                 </p>
               </div>
             </div>
@@ -77,27 +103,35 @@ export default function HakkimizdaPage() {
 
           {/* Contact */}
           <div className={styles.about__contact}>
-            <h2>İletişim</h2>
-            <div className="section-divider"></div>
+            <div className="section-title">
+              <h2>Atölyemize Bekleriz</h2>
+              <div className="section-divider"></div>
+              <p>Kahvemizi içmeye veya çiçeğinizi kendi gözlerinizle seçmeye davetlisiniz.</p>
+            </div>
             <div className={styles.about__contactGrid}>
               <div className={styles.about__contactCard}>
-                <h4>Adres</h4>
+                <span className={styles.contactIcon}>📍</span>
+                <h4>Atölye Adresi</h4>
                 <p>Bağdat Caddesi No:123</p>
                 <p>Kadıköy / İstanbul</p>
               </div>
               <div className={styles.about__contactCard}>
-                <h4>Telefon</h4>
-                <p>📞 <a href="tel:+902165550123">+90 (216) 555 0123</a></p>
-                <p>💬 <a href="https://wa.me/902165550123" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+                <span className={styles.contactIcon}>📞</span>
+                <h4>Telefon & WhatsApp</h4>
+                <p><a href="tel:+902165550123">+90 (216) 555 0123</a></p>
+                <p><a href="https://wa.me/902165550123" target="_blank" rel="noopener noreferrer" style={{ color: '#27ae60', fontWeight: 600 }}>WhatsApp Sohbeti Başlat →</a></p>
               </div>
               <div className={styles.about__contactCard}>
+                <span className={styles.contactIcon}>✉️</span>
                 <h4>E-Posta</h4>
-                <p>✉️ <a href="mailto:info@lotuscicekcilik.com">info@lotuscicekcilik.com</a></p>
+                <p><a href="mailto:info@lotuscicekcilik.com">info@lotuscicekcilik.com</a></p>
+                <p className="text-muted" style={{ fontSize: '0.8rem' }}>2 saat içinde yanıtlanır</p>
               </div>
               <div className={styles.about__contactCard}>
-                <h4>Çalışma Saatleri</h4>
-                <p>Pazartesi – Cumartesi: 08:00 – 22:00</p>
-                <p>Pazar: 09:00 – 20:00</p>
+                <span className={styles.contactIcon}>🕐</span>
+                <h4>Açık Olduğumuz Saatler</h4>
+                <p>Hafta içi: 08:30 – 22:00</p>
+                <p>Hafta sonu: 09:00 – 21:00</p>
               </div>
             </div>
           </div>
