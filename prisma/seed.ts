@@ -284,8 +284,8 @@ async function main() {
   await prisma.siteSettings.create({
     data: {
       id: 'main',
-      phone: '+90 (216) 555 0123',
-      whatsapp: '+902165550123',
+      phone: '+90 (000) 000 00 00',
+      whatsapp: '+905000000000',
       email: 'info@lotuscicekcilik.com',
       address: 'Bağdat Cad. No:123, Kadıköy/İstanbul',
       instagram: 'lotuscicekcilik',

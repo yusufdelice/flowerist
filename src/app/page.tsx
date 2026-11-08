@@ -295,7 +295,7 @@ export default async function HomePage() {
               </p>
             </div>
             <a
-              href="https://wa.me/902165550123"
+              href="https://wa.me/905000000000"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.whatsappBanner__btn}

@@ -45,8 +45,8 @@ export default function Footer() {
             <h4>İletişim & Konum</h4>
             <ul className={styles.footer__contactList}>
               <li>📍 Bağdat Cad. No:123, Kadıköy / İstanbul</li>
-              <li>📞 <a href="tel:+902165550123">+90 (216) 555 0123</a></li>
-              <li>💬 <a href="https://wa.me/902165550123" target="_blank" rel="noopener noreferrer">WhatsApp Destek Hattı</a></li>
+              <li>📞 <a href="tel:+900000000000">+90 (000) 000 00 00</a></li>
+              <li>💬 <a href="https://wa.me/905000000000" target="_blank" rel="noopener noreferrer">WhatsApp Destek Hattı</a></li>
               <li>✉️ info@lotuscicekcilik.com</li>
               <li>🕐 Her gün: 08:30 – 22:00</li>
             </ul>
@@ -60,7 +60,7 @@ export default function Footer() {
               Instagram
             </a>
             <span className={styles.footer__sep}>•</span>
-            <a href="https://wa.me/902165550123" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/905000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               WhatsApp
             </a>
             <span className={styles.footer__sep}>•</span>

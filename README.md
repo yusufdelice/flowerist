@@ -127,10 +127,10 @@ npm install
 ```
 
 ### 2. Çevresel Değişkenleri Belirleyin (`.env`)
-Proje kök dizinindeki `.env` dosyasını doğrulayın:
+Proje kök dizininde `.env` dosyanızı oluşturun:
 ```env
-DATABASE_URL="file:./dev.db"
-ADMIN_PASSWORD="lotus2024"
+DATABASE_URL="your-database-connection-url"
+ADMIN_PASSWORD="guclu-bir-sifre-belirleyin"
 ```
 
 ### 3. Veritabanını Hazırlayın ve Tohumlayın (Seed)
@@ -151,7 +151,7 @@ Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin.
 
 Yönetim paneline erişmek için:
 - **URL:** [http://localhost:3000/admin](http://localhost:3000/admin)
-- **Varsayılan Şifre:** `lotus2024` *(değiştirmek için `.env` dosyasındaki `ADMIN_PASSWORD` değerini güncelleyin)*
+- **Giriş Şifresi:** `.env` (yerelde) veya Vercel Environment Variables içinde belirlediğiniz `ADMIN_PASSWORD` değeri.
 
 ### Panel Modülleri:
 1. **Ürünler (`/admin/products`):** Ürünlerin fiyatını, görsellerini, açıklamasını ve stok durumunu yönetin.

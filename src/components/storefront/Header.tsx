@@ -19,8 +19,8 @@ export default function Header() {
             <span className={styles.topBar__badge}>Taze Çiçek Garantisi</span>
           </div>
           <div className={styles.topBar__contact}>
-            <a href="tel:+902165550123" className={styles.topBar__link}>
-              📞 +90 (216) 555 0123
+            <a href="tel:+900000000000" className={styles.topBar__link}>
+              📞 +90 (000) 000 00 00
             </a>
             <Link href="/admin" className={styles.topBar__adminLink} title="Yönetim Paneli">
               ⚙️ CMS Paneli
@@ -49,7 +49,7 @@ export default function Header() {
 
           <div className={styles.header__actions}>
             <a
-              href="https://wa.me/902165550123"
+              href="https://wa.me/905000000000"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.header__whatsappBtn}
@@ -79,7 +79,7 @@ export default function Header() {
           <Link href="/hakkimizda" onClick={() => setMobileOpen(false)}>Hakkımızda</Link>
           <Link href="/admin" onClick={() => setMobileOpen(false)}>⚙️ CMS Yönetim Paneli</Link>
           <a
-            href="https://wa.me/902165550123"
+            href="https://wa.me/905000000000"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mobileWhatsappLink}

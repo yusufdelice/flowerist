@@ -118,8 +118,8 @@ export default function HakkimizdaPage() {
               <div className={styles.about__contactCard}>
                 <span className={styles.contactIcon}>📞</span>
                 <h4>Telefon & WhatsApp</h4>
-                <p><a href="tel:+902165550123">+90 (216) 555 0123</a></p>
-                <p><a href="https://wa.me/902165550123" target="_blank" rel="noopener noreferrer" style={{ color: '#27ae60', fontWeight: 600 }}>WhatsApp Sohbeti Başlat →</a></p>
+                <p><a href="tel:+900000000000">+90 (000) 000 00 00</a></p>
+                <p><a href="https://wa.me/905000000000" target="_blank" rel="noopener noreferrer" style={{ color: '#27ae60', fontWeight: 600 }}>WhatsApp Sohbeti Başlat →</a></p>
               </div>
               <div className={styles.about__contactCard}>
                 <span className={styles.contactIcon}>✉️</span>

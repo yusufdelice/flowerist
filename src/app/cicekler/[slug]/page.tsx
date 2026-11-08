@@ -55,7 +55,7 @@ export default async function ProductDetailPage({
   const images: string[] = JSON.parse(product.images || '[]');
   const tags = product.tags ? product.tags.split(',').map((t: string) => t.trim()) : [];
   const whatsappLink = generateWhatsAppLink(
-    '+902165550123',
+    '+905000000000',
     product.name,
     `https://lotuscicekcilik.com/cicekler/${product.slug}`
   );
@@ -120,11 +120,11 @@ export default async function ProductDetailPage({
                 <span>WhatsApp ile Hızlı Sipariş Ver</span>
               </a>
               <a
-                href="tel:+902165550123"
+                href="tel:+900000000000"
                 className={styles.info__phoneBtn}
               >
                 <span>📞</span>
-                <span>Telefonla Sipariş: +90 (216) 555 0123</span>
+                <span>Telefonla Sipariş: +90 (000) 000 00 00</span>
               </a>
             </div>
 
